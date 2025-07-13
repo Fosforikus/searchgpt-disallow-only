@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TEST A3 – Disallow seul</title>
+</head>
+<body>
+  <h1>🧪 TEST A3 – Disallow-only</h1>
+
+  <h2>🔍 Objectif du test</h2>
+  <p>Ce test isole l'effet du fichier robots.txt seul, sans balise meta bloquante. Il vise à vérifier si SearchGPT respecte le blocage d'accès au crawl sans consommer la page.</p>
+
+  <h2>🧾 Phrase absurde à détecter</h2>
+  <p><strong>Le flamant binaire de Montluçon orchestre des opérettes quantiques en langage Morse balkanique.</strong></p>
+
+  <h2>📁 Configuration robots.txt</h2>
+  <pre>
+User-agent: *
+Disallow: /
+  </pre>
+
+  <h2>📌 Résultat attendu</h2>
+  <p>SearchGPT ne doit pas pouvoir détecter cette phrase. Si elle apparaît dans les résultats, cela signifie que le blocage robots.txt n’est pas respecté.</p>
+</body>
+</html>
