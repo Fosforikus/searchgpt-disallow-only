@@ -1,0 +1,1 @@
+# searchgpt-disallow-only
